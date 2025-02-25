@@ -1,7 +1,8 @@
 :root {
-    --primary-color: #E67E22;
+    --primary-color: #0B6623;
+    --primary-color-dark: #084d1b;
     --text-color: #2C3E50;
-    --light-bg: #F8F9FA;
+    --light-bg: #F0F5F1;
     --white: #FFFFFF;
 }
 
@@ -130,7 +131,7 @@ nav a {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    background: #D35400;
+    background: var(--primary-color-dark);
 }
 
 section {
