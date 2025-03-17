@@ -11,7 +11,7 @@
         <nav>
             <div class="nav-container">
                 <div class="logo">
-                    <img src="src/logo.png" alt="Logo Poradni">
+                    <img src="src/400x100-sam-napis.png" alt="Logo Poradni">
                 </div>
                 <div class="nav-links">
                     <ul>
@@ -28,6 +28,20 @@
  
     <main>
         <section id="hero" class="hero-content">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="src/tree1.jpg" alt="Zdjęcie 1">
+                </div>
+                <div class="slide">
+                    <img src="src/tree2.jpg" alt="Zdjęcie 2">
+                </div>
+                <div class="slide">
+                    <img src="src/tree3.jpg" alt="Zdjęcie 3">
+                </div>
+                <div class="slide">
+                    <img src="src/tree4.jpg" alt="Zdjęcie 4">
+                </div>
+            </div>
             <h1>Poradnia Leczenia Uzależnień i Współuzależnień w Barlinku</h1>
             <p>Profesjonalna pomoc w leczeniu uzależnień</p>
             <a href="#kontakt" class="cta-button">Umów wizytę</a>
@@ -62,7 +76,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="card-header">
-                        <div class="card-icon">👤</div>
+                        <div class="card-icon"></div>
                         <h3>Osoby uzależnione od:</h3>
                     </div>
                     <ul>
@@ -77,7 +91,7 @@
                 </div>
                 <div class="service-card">
                     <div class="card-header">
-                        <div class="card-icon">👨‍👩‍👧‍👦</div>
+                        <div class="card-icon"></div>
                         <h3>Członkowie rodzin</h3>
                     </div>
                     <ul>
@@ -95,22 +109,22 @@
                 <h2>Nasza oferta</h2>
                 <div class="offer-grid">
                     <div class="offer-item">
-                        <div class="offer-icon">🤝</div>
+                        <div class="offer-icon"></div>
                         <h3>Konsultacje indywidualne</h3>
                         <p>Profesjonalne wsparcie w bezpiecznej atmosferze</p>
                     </div>
                     <div class="offer-item">
-                        <div class="offer-icon">👥</div>
+                        <div class="offer-icon"></div>
                         <h3>Terapia grupowa</h3>
                         <p>Wsparcie i wymiana doświadczeń w grupie</p>
                     </div>
                     <div class="offer-item">
-                        <div class="offer-icon">💻</div>
+                        <div class="offer-icon"></div>
                         <h3>Terapia online</h3>
                         <p>Możliwość konsultacji i prowadzenia terapii on-line</p>
                     </div>
                     <div class="offer-item">
-                        <div class="offer-icon">👨‍👩‍👧‍👦</div>
+                        <div class="offer-icon"></div>
                         <h3>Wsparcie dla rodzin</h3>
                         <p>Pomoc dla osób współuzależnionych</p>
                     </div>
@@ -148,5 +162,38 @@
     <footer>
         <p>&copy; 2025 Poradnia Leczenia Uzależnień i Współuzależnień w Barlinku</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Slider code
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            
+            setInterval(nextSlide, 5000);
+
+            // Fade in animation
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
