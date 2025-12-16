@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poradnia Leczenia Uzależnień Barlinek - Psychoterapeuta Katarzyna Tokaj-Czaja</title>
     
-    <!-- Aktualizacja ścieżek favicon -->
     <link rel="icon" type="image/x-icon" href="src/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
@@ -15,146 +14,1119 @@
     <meta name="description" content="Profesjonalna pomoc w leczeniu uzależnień w Barlinku. Terapia uzależnień, wsparcie dla rodzin, konsultacje indywidualne. Certyfikowany specjalista psychoterapii uzależnień.">
     <meta name="keywords" content="psychoterapeuta Barlinek, terapia uzależnień, leczenie uzależnień, poradnia uzależnień, uzależnienia Barlinek, psychoterapia">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nowadroga-katarzyna-tokaj-czaja.pl/">
     <meta property="og:title" content="Poradnia Leczenia Uzależnień Barlinek">
     <meta property="og:description" content="Profesjonalna pomoc w leczeniu uzależnień. Certyfikowany specjalista psychoterapii uzależnień Katarzyna Tokaj-Czaja.">
-    <meta property="og:image" content="https://twoja-domena.pl/src/specialist.jpg">
+    <meta property="og:image" content="https://nowadroga-katarzyna-tokaj-czaja.pl/src/specialist.jpg">
     
     <link rel="canonical" href="https://nowadroga-katarzyna-tokaj-czaja.pl/">
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a5f3c;
+            --primary-light: #2d8a5a;
+            --primary-dark: #0d4028;
+            --accent: #d4a853;
+            --text: #1a2b23;
+            --text-light: #4a5c52;
+            --bg: #f8faf9;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(26, 95, 60, 0.08);
+            --shadow-hover: 0 12px 40px rgba(26, 95, 60, 0.15);
+            --radius: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(26, 95, 60, 0.08);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 60px;
+            padding-right: 40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo img {
+            height: 58px;
+            width: auto;
+            transition: var(--transition);
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 10px 18px;
+            border-radius: 100px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            background: rgba(26, 95, 60, 0.06);
+        }
+
+        .phone-button {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 12px 24px !important;
+            border-radius: 100px;
+            font-weight: 600;
+            margin-left: 16px;
+            box-shadow: 0 4px 12px rgba(26, 95, 60, 0.25);
+        }
+
+        .phone-button:hover {
+            background: var(--primary-light) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 95, 60, 0.35);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(26, 95, 60, 0.85) 0%,
+                rgba(13, 64, 40, 0.75) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--white);
+            padding: 40px 24px;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-content p {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            opacity: 0.95;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            color: var(--primary);
+            padding: 18px 36px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .cta-button svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover svg {
+            transform: translateX(4px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 32px;
+            height: 32px;
+            color: var(--white);
+            opacity: 0.7;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #o-nas {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px solid var(--primary);
+            border-radius: var(--radius-lg);
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .about-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--text);
+            margin-bottom: 24px;
+        }
+
+        .about-intro {
+            font-size: 1.15rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .about-text {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.25rem;
+            color: var(--text);
+            margin: 32px 0 20px;
+            font-weight: 600;
+        }
+
+        .experience-list {
+            list-style: none;
+        }
+
+        .experience-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 16px;
+            color: var(--text-light);
+        }
+
+        .experience-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        #dla-kogo {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #dla-kogo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        #dla-kogo .section-header {
+            position: relative;
+            z-index: 1;
+        }
+
+        #dla-kogo .section-tag {
+            color: var(--accent);
+        }
+
+        #dla-kogo .section-title {
+            color: var(--white);
+        }
+
+        #dla-kogo .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .target-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            transition: var(--transition);
+        }
+
+        .target-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .target-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--accent);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .target-icon svg {
+            width: 32px;
+            height: 32px;
+            color: var(--primary-dark);
+        }
+
+        .target-card h3 {
+            color: var(--white);
+            font-size: 1.35rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .target-card ul {
+            list-style: none;
+        }
+
+        .target-card li {
+            color: rgba(255, 255, 255, 0.9);
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.05rem;
+        }
+
+        .target-card li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        #oferta {
+            background: var(--white);
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .offer-card {
+            background: var(--bg);
+            border-radius: var(--radius-lg);
+            padding: 36px 28px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .offer-card:hover {
+            background: var(--white);
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .offer-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            transition: var(--transition);
+        }
+
+        .offer-card:hover .offer-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .offer-icon svg {
+            width: 36px;
+            height: 36px;
+            color: var(--white);
+        }
+
+        .offer-card h3 {
+            font-size: 1.15rem;
+            color: var(--text);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .offer-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        #kontakt {
+            background: var(--bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--bg);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+        }
+
+        .contact-item-text p {
+            color: var(--text);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .contact-item-text span {
+            display: block;
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-top: 2px;
+        }
+
+        .map-container {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            background: var(--text);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            max-width: 480px;
+            width: 90%;
+            animation: modalIn 0.3s ease-out;
+            overflow: hidden;
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-header {
+            padding: 24px;
+            border-bottom: 1px solid var(--bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h4 {
+            font-size: 1.25rem;
+            color: var(--text);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--text-light);
+            line-height: 1;
+            padding: 4px;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--text);
+        }
+
+        .modal-body {
+            padding: 24px;
+        }
+
+        .modal-body p {
+            color: var(--text-light);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .phone-number-container {
+            background: var(--bg);
+            padding: 16px 20px;
+            border-radius: var(--radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .phone-number {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .copy-button {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .copy-button:hover {
+            background: var(--primary-light);
+        }
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .call-now-button, .sms-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .call-now-button {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .call-now-button:hover {
+            background: var(--primary-light);
+        }
+
+        .sms-button {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .sms-button:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 999;
+            padding-top: 100px;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-menu li {
+            margin: 20px 0;
+        }
+
+        .mobile-menu a {
+            font-size: 1.5rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 1024px) {
+            .offer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .about-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .target-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .offer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image::before {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <img src="src/400x100-sam-napis-myslnik.png" alt="Poradnia Leczenia Uzależnień Barlinek - Logo" width="400" height="100">
-                </div>
-                <div class="nav-links">
-                    <ul>
-                        <li><a href="#o-nas">O mnie</a></li>
-                        <li><a href="#oferta">Oferta</a></li>
-                        <li><a href="#dla-kogo">Dla kogo</a></li>
-                        <li><a href="#kontakt">Kontakt</a></li>
-                    </ul>
-                    <a href="#" class="phone-button" id="callButton">Zadzwoń</a>
-                </div>
+            <div class="logo">
+                <img src="src/400x100-sam-napis-myslnik.png" alt="Poradnia Leczenia Uzależnień Barlinek - Logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#o-nas">O mnie</a></li>
+                    <li><a href="#oferta">Oferta</a></li>
+                    <li><a href="#dla-kogo">Dla kogo</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+                <a href="#" class="phone-button" id="callButton">Zadzwoń</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
- 
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#o-nas">O mnie</a></li>
+            <li><a href="#oferta">Oferta</a></li>
+            <li><a href="#dla-kogo">Dla kogo</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#" id="callButtonMobile">Zadzwoń</a></li>
+        </ul>
+    </div>
+
     <main>
-        <section id="hero" class="hero-content">
-            <div class="slider">
-                <div class="slide active">
-                    <img src="src/tree1.jpg" alt="Zdjęcie 1">
+        <section id="hero">
+            <div class="hero-slider">
+                <div class="hero-slide active">
+                    <img src="src/new_images/tree1.jpg" alt="Zdjęcie 1">
                 </div>
-                <div class="slide">
-                    <img src="src/tree2.jpg" alt="Zdjęcie 2">
+                <div class="hero-slide">
+                    <img src="src/new_images/tree2.jpg" alt="Zdjęcie 2">
                 </div>
-                <div class="slide">
-                    <img src="src/tree3.jpg" alt="Zdjęcie 3">
-                </div>
-                <div class="slide">
-                    <img src="src/tree4.jpg" alt="Zdjęcie 4">
+                <div class="hero-slide">
+                    <img src="src/new_images/tree3.jpg" alt="Zdjęcie 3">
                 </div>
             </div>
-            <h1>Poradnia Leczenia Uzależnień i Współuzależnień w Barlinku</h1>
-            <p>Profesjonalna pomoc w leczeniu uzależnień</p>
-            <a href="#kontakt" class="cta-button">Umów wizytę</a>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">Certyfikowany Specjalista Psychoterapii Uzależnień</span>
+                <h1>Poradnia Leczenia Uzależnień i Współuzależnień w Barlinku</h1>
+                <p>Profesjonalna pomoc w leczeniu uzależnień</p>
+                <a href="#kontakt" class="cta-button">
+                    Umów wizytę
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </div>
         </section>
 
-        <section id="o-nas" class="about-section">
+        <section id="o-nas">
             <div class="container">
-                <h2>O mnie</h2>
-                <div class="about-content">
-                    <div class="team-member">
-                        <div class="member-photo">
-                            <img src="src/specialist.jpg" 
-                                 alt="Katarzyna Tokaj-Czaja - Certyfikowany Specjalista Psychoterapii Uzależnień w Barlinku" 
-                                 width="300" 
-                                 height="400"
-                                 loading="lazy">
-                        </div>
-                        <div class="member-info">
-                            <h3>Katarzyna Tokaj-Czaja</h3>
-                            <div class="description">
-                                <p class="intro">Specjalizuję się w pomocy osobom zmagającym się z uzależnieniami oraz ich rodzinom. Moje podejście łączy profesjonalizm z empatią, tworząc bezpieczną przestrzeń do pracy nad sobą.</p>
-                                
-                                <div class="education">
-                                    <p>Z wykształcenia jestem pedagogiem, absolwentką Uniwersytetu Szczecińskiego i certyfikowanym specjalistą psychoterapii uzależnień. Ukończyłam Studium Terapii Uzależnień realizowane przez Instytut Psychologii Zdrowia Polskiego Towarzystwa Psychologicznego w Warszawie. Swoją wiedzę i umiejętności poszerzam poprzez udział w szkoleniach i konferencjach, a także superwizjach grupowych i indywidualnych.</p>
-                                </div>
-
-                                <div class="experience">
-                                    <h4>Doświadczenie zawodowe:</h4>
-                                    <p>Staż kliniczny w zawodzie psychoterapeuty uzależnień odbyłam w Ośrodku dla Osób Uzależnionych SPZOZ w Nowym Dworku, głównie w filii Glińsk.</p>
-                                    <p>Pracowałam jako terapeuta indywidualny i grupowy w Ośrodku Terapeutycznym Szansa w Gorzowie Wielkopolskim.</p>
-                                    <p>W Katolickim Ośrodku Szkolenia i Wychowania dla młodzieży w Strychach, a także w Barlinku w Poradni Leczenia Uzależnień Pana Mariana Pędziszczak w spadku.</p>
-                                    <p>Obecnie współpracuję z Ośrodkiem Zmiana w Choszcznie, gdzie pracuję indywidualnie a także realizuję program psychoedukacyjny dla członków rodziny osób uzależnionych.</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="section-header fade-up">
+                    <span class="section-tag">O mnie</span>
+                    <h2 class="section-title">Katarzyna Tokaj-Czaja</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image fade-up">
+                        <img src="src/specialist.jpg" alt="Katarzyna Tokaj-Czaja - Certyfikowany Specjalista Psychoterapii Uzależnień w Barlinku" loading="lazy">
+                    </div>
+                    <div class="about-content fade-up">
+                        <p class="about-intro">Specjalizuję się w pomocy osobom zmagającym się z uzależnieniami oraz ich rodzinom. Moje podejście łączy profesjonalizm z empatią, tworząc bezpieczną przestrzeń do pracy nad sobą.</p>
+                        <p class="about-text">Z wykształcenia jestem pedagogiem, absolwentką Uniwersytetu Szczecińskiego i certyfikowanym specjalistą psychoterapii uzależnień. Ukończyłam Studium Terapii Uzależnień realizowane przez Instytut Psychologii Zdrowia Polskiego Towarzystwa Psychologicznego w Warszawie. Swoją wiedzę i umiejętności poszerzam poprzez udział w szkoleniach i konferencjach, a także superwizjach grupowych i indywidualnych.</p>
+                        
+                        <h4 class="experience-title">Doświadczenie zawodowe:</h4>
+                        <ul class="experience-list">
+                            <li>Staż kliniczny w zawodzie psychoterapeuty uzależnień odbyłam w Ośrodku dla Osób Uzależnionych SPZOZ w Nowym Dworku, głównie w filii Glińsk.</li>
+                            <li>Pracowałam jako terapeuta indywidualny i grupowy w Ośrodku Terapeutycznym Szansa w Gorzowie Wielkopolskim.</li>
+                            <li>W Katolickim Ośrodku Szkolenia i Wychowania dla młodzieży w Strychach, a także w Barlinku w Poradni Leczenia Uzależnień Pana Mariana Pędziszczak w spadku.</li>
+                            <li>Obecnie współpracuję z Ośrodkiem Zmiana w Choszcznie, gdzie pracuję indywidualnie a także realizuję program psychoedukacyjny dla członków rodziny osób uzależnionych.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="dla-kogo">
-            <h2>Dla kogo?</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="card-header">
-                        <div class="card-icon"></div>
-                        <h3>Osoby uzależnione od:</h3>
-                    </div>
-                    <ul>
-                        <li><span class="bullet">•</span>Alkoholu</li>
-                        <li><span class="bullet">•</span>Substancji psychoaktywnych i leków</li>
-                        <li><span class="bullet">•</span>Hazardu</li>
-                        <li><span class="bullet">•</span>Internetu</li>
-                        <li><span class="bullet">•</span>Seksu</li>
-                        <li><span class="bullet">•</span>Zakupów</li>
-                        <li><span class="bullet">•</span>Pracy</li>
-                    </ul>
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="section-tag">Dla kogo</span>
+                    <h2 class="section-title">Komu pomagam?</h2>
+                    <p class="section-subtitle">Oferuję profesjonalną pomoc dla osób uzależnionych oraz ich bliskich</p>
                 </div>
-                <div class="service-card">
-                    <div class="card-header">
-                        <div class="card-icon"></div>
-                        <h3>Członkowie rodzin</h3>
+                <div class="target-grid">
+                    <div class="target-card fade-up">
+                        <div class="target-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="7" r="4"/>
+                                <path d="M5.5 21a7.5 7.5 0 0 1 13 0"/>
+                            </svg>
+                        </div>
+                        <h3>Osoby uzależnione od:</h3>
+                        <ul>
+                            <li>Alkoholu</li>
+                            <li>Substancji psychoaktywnych i leków</li>
+                            <li>Hazardu</li>
+                            <li>Internetu</li>
+                            <li>Seksu</li>
+                            <li>Zakupów</li>
+                            <li>Pracy</li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li><span class="bullet">•</span>Rodzice</li>
-                        <li><span class="bullet">•</span>Dzieci</li>
-                        <li><span class="bullet">•</span>Partnerzy</li>
-                        <li><span class="bullet">•</span>Bliscy osób uzależnionych</li>
-                    </ul>
+                    <div class="target-card fade-up">
+                        <div class="target-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Członkowie rodzin</h3>
+                        <ul>
+                            <li>Rodzice</li>
+                            <li>Dzieci</li>
+                            <li>Partnerzy</li>
+                            <li>Bliscy osób uzależnionych</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="oferta" class="offer-section">
+        <section id="oferta">
             <div class="container">
-                <h2>Nasza oferta</h2>
+                <div class="section-header fade-up">
+                    <span class="section-tag">Oferta</span>
+                    <h2 class="section-title">Nasza oferta</h2>
+                    <p class="section-subtitle">Kompleksowa pomoc w procesie leczenia i wsparcia</p>
+                </div>
                 <div class="offer-grid">
-                    <div class="offer-item">
-                        <div class="offer-icon"></div>
+                    <div class="offer-card fade-up">
+                        <div class="offer-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="7" r="4"/>
+                                <path d="M5.5 21a7.5 7.5 0 0 1 13 0"/>
+                            </svg>
+                        </div>
                         <h3>Konsultacje indywidualne</h3>
                         <p>Profesjonalne wsparcie w bezpiecznej atmosferze</p>
                     </div>
-                    <div class="offer-item">
-                        <div class="offer-icon"></div>
+                    <div class="offer-card fade-up">
+                        <div class="offer-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
                         <h3>Terapia grupowa</h3>
                         <p>Wsparcie i wymiana doświadczeń w grupie</p>
                     </div>
-                    <div class="offer-item">
-                        <div class="offer-icon"></div>
+                    <div class="offer-card fade-up">
+                        <div class="offer-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
                         <h3>Terapia online</h3>
                         <p>Możliwość konsultacji i prowadzenia terapii on-line</p>
                     </div>
-                    <div class="offer-item">
-                        <div class="offer-icon"></div>
+                    <div class="offer-card fade-up">
+                        <div class="offer-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
                         <h3>Wsparcie dla rodzin</h3>
                         <p>Pomoc dla osób współuzależnionych</p>
                     </div>
@@ -162,23 +1134,54 @@
             </div>
         </section>
 
-        <section id="kontakt" class="contact-section">
+        <section id="kontakt">
             <div class="container">
-                <h2>Kontakt</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
+                <div class="section-header fade-up">
+                    <span class="section-tag">Kontakt</span>
+                    <h2 class="section-title">Skontaktuj się z nami</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info fade-up">
                         <h3>Poradnia Leczenia Uzależnień i Współuzależnienia</h3>
-                        <p>ul. Szpitalna 11/104</p>
-                        <p>74-320 Barlinek</p>
-                        <p>Tel: +48 727 449 774</p>
-                        <p>Email: poradnianowadroga@gmail.com</p>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <p>ul. Szpitalna 11/104</p>
+                                <span>74-320 Barlinek</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <p>+48 727 449 774</p>
+                                <span>Telefon</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <p>poradnianowadroga@gmail.com</p>
+                                <span>Email</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="map-container">
+                    <div class="map-container fade-up">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.209769790248!2d15.21021431580601!3d53.00316997991373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8f9b7a2a40ba3%3A0x9ef33da4596c8fc3!2sSzpitalna%2011%2C%2074-320%20Barlinek!5e0!3m2!1spl!2spl!4v1650000000000!5m2!1spl!2spl" 
-                            width="100%" 
-                            height="450" 
-                            style="border:0;" 
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade">
@@ -190,13 +1193,44 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Poradnia Leczenia Uzależnień i Współuzależnień w Barlinku</p>
+        <div class="container">
+            <p>&copy; 2025 Poradnia Leczenia Uzależnień i Współuzależnień w Barlinku</p>
+        </div>
     </footer>
+
+    <div class="modal" id="callModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Informacja</h4>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Telefon odbieram w godzinach pracy poradni, zachęcam do kontaktu SMS - oddzwonię w wolnej chwili.</p>
+                <div class="phone-number-container">
+                    <span class="phone-number" id="phoneNumber">727 449 774</span>
+                    <button class="copy-button" id="copyButton">Kopiuj</button>
+                </div>
+                <div class="action-buttons">
+                    <a href="tel:+48727449774" class="call-now-button">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Zadzwoń teraz
+                    </a>
+                    <a href="sms:+48727449774" class="sms-button">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Wyślij SMS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Slider code
-            const slides = document.querySelectorAll('.slide');
+            const slides = document.querySelectorAll('.hero-slide');
             let currentSlide = 0;
             
             function nextSlide() {
@@ -207,8 +1241,7 @@
             
             setInterval(nextSlide, 5000);
 
-            // Fade in animation
-            const fadeElements = document.querySelectorAll('.fade-in');
+            const fadeElements = document.querySelectorAll('.fade-up');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -217,11 +1250,75 @@
                     }
                 });
             }, {
-                threshold: 0.1
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             });
             
             fadeElements.forEach(element => {
                 observer.observe(element);
+            });
+
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            const modal = document.getElementById('callModal');
+            const callButton = document.getElementById('callButton');
+            const callButtonMobile = document.getElementById('callButtonMobile');
+            const closeButton = document.querySelector('.close-modal');
+            const copyButton = document.getElementById('copyButton');
+            const phoneNumber = document.getElementById('phoneNumber');
+
+            function openModal(e) {
+                e.preventDefault();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            callButton.addEventListener('click', openModal);
+            callButtonMobile.addEventListener('click', openModal);
+
+            closeButton.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            copyButton.addEventListener('click', function() {
+                navigator.clipboard.writeText(phoneNumber.textContent.replace(/\s/g, '')).then(function() {
+                    copyButton.textContent = 'Skopiowano!';
+                    setTimeout(function() {
+                        copyButton.textContent = 'Kopiuj';
+                    }, 2000);
+                });
             });
         });
     </script>
@@ -253,67 +1350,6 @@
             "https://www.facebook.com/twoj-profil-fb"
         ]
     }
-    </script>
-
-    <!-- Dodajemy modal na końcu body, przed zamknięciem -->
-    <div class="modal" id="callModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4>Informacja</h4>
-                <button class="close-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Telefon odbieram w godzinach pracy poradni, zachęcam do kontaktu SMS - oddzwonię w wolnej chwili.</p>
-                <div class="phone-number-container">
-                    <span class="phone-number" id="phoneNumber">727 449 774</span>
-                    <button class="copy-button" id="copyButton">Kopiuj</button>
-                </div>
-                <div class="action-buttons">
-                    <a href="tel:+48727449774" class="call-now-button">Zadzwoń teraz</a>
-                    <a href="sms:+48727449774" class="sms-button">Wyślij SMS</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const modal = document.getElementById('callModal');
-        const callButton = document.getElementById('callButton');
-        const closeButton = document.querySelector('.close-modal');
-        const copyButton = document.getElementById('copyButton');
-        const phoneNumber = document.getElementById('phoneNumber');
-
-        // Otwieranie modalu
-        callButton.addEventListener('click', function() {
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-
-        // Zamykanie modalu
-        closeButton.addEventListener('click', function() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-
-        // Zamykanie po kliknięciu poza modalem
-        window.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Kopiowanie numeru telefonu
-        copyButton.addEventListener('click', function() {
-            navigator.clipboard.writeText(phoneNumber.textContent.replace(/\s/g, '')).then(function() {
-                copyButton.textContent = 'Skopiowano!';
-                setTimeout(function() {
-                    copyButton.textContent = 'Kopiuj';
-                }, 2000);
-            });
-        });
-    });
     </script>
 </body>
 </html>
