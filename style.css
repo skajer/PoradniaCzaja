@@ -471,7 +471,7 @@ footer p {
     border-radius: 30px;
     padding: 4rem;
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 1fr;
     gap: 5rem;
     align-items: center;
 }
@@ -539,7 +539,7 @@ footer p {
 
 @media (max-width: 1200px) {
     .team-member {
-        grid-template-columns: 350px 1fr;
+        grid-template-columns: 1fr;
         gap: 3rem;
         padding: 3rem;
     }
