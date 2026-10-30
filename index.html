@@ -6,6 +6,8 @@
 <title>Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia | Barlinek</title>
 <meta name="description" content="Poradnia terapii uzależnień i współuzależnienia w Barlinku. Wizyty refundowane przez NFZ, bez skierowania. Katarzyna Tokaj-Czaja, Krzysztof Fedyna, Anna Kaczmarek.">
 <meta name="theme-color" content="#004517">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
 <link rel="icon" href="src/favicon/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="src/favicon/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="src/favicon/apple-touch-icon.png">
@@ -23,6 +25,7 @@
 :root{--loader-bg:#004517;--loader-fg:#ffffff}
 
 *,*::before,*::after{box-sizing:border-box}
+:root{color-scheme:only light}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
@@ -70,7 +73,7 @@ header.solid .btn{background:var(--g);color:#fff!important}
 .burger{display:none;background:none;border:0;padding:8px;color:inherit}
 .burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px 0}
 .hero{position:relative;min-height:100svh;display:grid;align-items:end;color:#fff;overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% center}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,40,14,.55) 0%,rgba(0,40,14,.15) 38%,rgba(0,40,14,.78) 100%)}
 .hero .wrap{position:relative;z-index:2;padding:130px 0 70px}
 .hero .mk{width:min(240px,48vw);color:#fff;margin-bottom:26px}
@@ -132,7 +135,7 @@ footer{padding:26px 0;text-align:center;font-size:.85rem;opacity:.7}
 @media (max-width:900px){
  .links{position:absolute;left:0;right:0;top:100%;background:var(--bg);color:var(--g);flex-direction:column;align-items:flex-start;padding:10px 20px 24px;gap:0;display:none}
  .links a{padding:14px 0;width:100%}
- .links .btn{background:var(--g);color:#fff!important;width:auto;margin-top:8px}
+ .links .btn{background:var(--g);color:#fff!important;width:auto;margin-top:8px;padding:.85rem 1.4rem}
  header.open .links{display:flex}
  header.open{background:var(--bg);color:var(--g)}
  .burger{display:block}
@@ -140,7 +143,7 @@ footer{padding:26px 0;text-align:center;font-size:.85rem;opacity:.7}
  .say .ph{min-height:300px;order:2}.say .tx{padding:52px 24px}
  .tiles,.tgrid,.hl,.qa,.where{grid-template-columns:1fr}
  .tile{min-height:420px}.person{aspect-ratio:4/5}
- .where .door{grid-template-columns:1fr}.where .door img{max-height:340px}
+ .where .door{grid-template-columns:1fr}.where .door img{max-height:none;aspect-ratio:4/5;object-position:center 60%}
  section.s{padding:68px 0}
 }
 
