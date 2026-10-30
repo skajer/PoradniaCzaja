@@ -6,6 +6,8 @@
 <title>Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia | Barlinek</title>
 <meta name="description" content="Poradnia terapii uzależnień i współuzależnienia w Barlinku. Wizyty refundowane przez NFZ, bez skierowania. Katarzyna Tokaj-Czaja, Krzysztof Fedyna, Anna Kaczmarek.">
 <meta name="theme-color" content="#06371a">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
 <link rel="icon" href="src/favicon/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="src/favicon/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="src/favicon/apple-touch-icon.png">
@@ -23,6 +25,7 @@
 :root{--loader-bg:#06371a;--loader-fg:#f4efe2}
 
 *,*::before,*::after{box-sizing:border-box}
+:root{color-scheme:only light}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
@@ -123,13 +126,13 @@ footer{padding:28px 0;text-align:center;font-size:.85rem;color:#a9bba8}
 @media (max-width:900px){
  .links{position:absolute;left:0;right:0;top:100%;background:var(--deep);flex-direction:column;align-items:flex-start;padding:10px 20px 24px;gap:0;display:none;border-bottom:1px solid rgba(255,255,255,.1)}
  .links a{padding:14px 0;width:100%}
- .links .btn{width:auto;margin-top:8px}
+ .links .btn{width:auto;margin-top:8px;padding:.85rem 1.4rem}
  header.open .links{display:flex}
  .burger{display:block}
  .hero{padding:36px 0 60px}.hero .wrap{grid-template-columns:1fr;gap:40px}
- .arch{max-width:380px;order:-1}
- .two,.trio,.tgrid,.where{grid-template-columns:1fr}.tgrid{max-width:380px}
- .where .door{grid-template-columns:1fr}.where .door img{max-height:340px}
+ .arch{max-width:380px;order:-1;margin-inline:auto}
+ .two,.trio,.tgrid,.where{grid-template-columns:1fr}.tgrid{max-width:380px;margin-inline:auto}
+ .where .door{grid-template-columns:1fr}.where .door img{max-height:none;aspect-ratio:4/5;object-position:center 60%}
  section.s{padding:68px 0}
 }
 
