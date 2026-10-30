@@ -6,6 +6,8 @@
 <title>Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia | Barlinek</title>
 <meta name="description" content="Poradnia terapii uzależnień i współuzależnienia w Barlinku. Wizyty refundowane przez NFZ, bez skierowania. Katarzyna Tokaj-Czaja, Krzysztof Fedyna, Anna Kaczmarek.">
 <meta name="theme-color" content="#004517">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
 <link rel="icon" href="src/favicon/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="src/favicon/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="src/favicon/apple-touch-icon.png">
@@ -23,6 +25,7 @@
 :root{--loader-bg:#f7f4ed;--loader-fg:#004517}
 
 *,*::before,*::after{box-sizing:border-box}
+:root{color-scheme:only light}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
@@ -130,13 +133,13 @@ footer{padding:28px 0;font-size:.85rem;color:var(--muted);text-align:center}
 @media (max-width:900px){
  .links{position:absolute;left:0;right:0;top:100%;background:var(--bg);flex-direction:column;align-items:flex-start;padding:10px 20px 24px;gap:0;border-bottom:1px solid var(--line);display:none}
  .links a{padding:14px 0;width:100%;font-size:1.05rem}
- .links .btn{margin-top:10px;width:auto}
+ .links .btn{margin-top:10px;width:auto;padding:.8rem 1.35rem}
  header.open .links{display:flex}
  .burger{display:block}
  .hero .wrap,.cg,.sign,.fq{grid-template-columns:1fr;gap:40px}
- .hero figure{order:-1;max-width:420px}
+ .hero figure{order:-1;max-width:420px;margin-inline:auto}
  .cards,.tgrid{grid-template-columns:1fr}
- .tgrid{max-width:420px}
+ .tgrid{max-width:420px;margin-inline:auto}
  .help{grid-template-columns:1fr}.help div,.help div+div{padding:24px 0;border-left:0;border-bottom:1px solid var(--line)}
  section{padding:68px 0}.hero{padding:28px 0 60px}
 }
