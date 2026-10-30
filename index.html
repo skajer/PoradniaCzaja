@@ -73,7 +73,8 @@ header.solid .btn{background:var(--g);color:#fff!important}
 .burger{display:none;background:none;border:0;padding:8px;color:inherit}
 .burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px 0}
 .hero{position:relative;min-height:100svh;display:grid;align-items:end;color:#fff;overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% center}
+.hero>picture{position:absolute;inset:0;display:block}
+.hero>picture img{width:100%;height:100%;object-fit:cover;object-position:30% center}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,40,14,.55) 0%,rgba(0,40,14,.15) 38%,rgba(0,40,14,.78) 100%)}
 .hero .wrap{position:relative;z-index:2;padding:130px 0 70px}
 .hero .mk{width:min(240px,48vw);color:#fff;margin-bottom:26px}
@@ -145,6 +146,15 @@ footer{padding:26px 0;text-align:center;font-size:.85rem;opacity:.7}
  .tile{min-height:420px}.person{aspect-ratio:4/5}
  .where .door{grid-template-columns:1fr}.where .door img{max-height:none;aspect-ratio:4/5;object-position:center 60%}
  section.s{padding:68px 0}
+ .hero .mk{display:none}
+ .hero{display:block;min-height:0;background:var(--g)}
+ .hero>picture{position:relative;height:66svh;min-height:420px}
+ .hero>picture img{object-position:center 55%}
+ .hero::after{inset:0 0 auto 0;height:calc(max(66svh,420px) + 2px);background:linear-gradient(180deg,rgba(0,40,14,.5) 0%,rgba(0,40,14,0) 22%,rgba(0,40,14,0) 62%,var(--g) 100%)}
+ .hero .wrap{padding:0 0 44px;margin-top:-96px}
+ .hero h1{font-size:clamp(3rem,15vw,4.2rem)}
+ .hero p{font-size:1.1rem;margin:12px 0 24px}
+ .pills{margin-top:22px}
 }
 
 </style>
@@ -172,7 +182,7 @@ window.__ndEnd=end;setTimeout(end,2100);
 </header>
 <main>
 <section class="hero">
-<img src="src/zdjecia/gabinet-1.webp" width="1800" height="1350" alt="Gabinet poradni: zielone fotele, stolik i lampa przy jasnej ścianie" fetchpriority="high" decoding="async">
+<picture><source media="(max-width:760px)" srcset="src/zdjecia/gabinet-pion-1.webp"><img src="src/zdjecia/gabinet-1.webp" width="1800" height="1350" alt="Gabinet poradni: zielone fotele, stolik i lampa przy jasnej ścianie" fetchpriority="high" decoding="async"></picture>
 <div class="wrap">
 <div class="mk mk-logo"></div>
 <h1>Nowa Droga</h1>
