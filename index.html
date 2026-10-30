@@ -77,10 +77,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(6,55,26,.88);backdrop-fi
 .hero{padding:70px 0 90px;color:var(--cream)}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
 .hero h1{font-size:clamp(3.2rem,7.4vw,6.6rem);margin-bottom:24px}
-.hero h1 em{font-style:italic;color:var(--lime)}
+.hero h1{color:#fff}
 .hero p{font-size:1.18rem;opacity:.88;max-width:32ch;margin-bottom:34px}
 .cta{display:flex;flex-wrap:wrap;gap:14px}
-.arch{border-radius:999px 999px 28px 28px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 0 0 14px rgba(255,255,255,.06)}
+.arch{border-radius:28px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 0 0 12px rgba(255,255,255,.06)}
 .arch img{width:100%;height:100%;object-fit:cover}
 .light{background:var(--cream);color:#16241b}
 .light h2,.light h3{color:var(--g)}
@@ -98,7 +98,7 @@ h2.big{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:38px}
 .trio h3{font-size:1.55rem;margin-bottom:8px;color:var(--lime)}
 .trio p{opacity:.85}
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.person .pic{border-radius:999px 999px 28px 28px;overflow:hidden;aspect-ratio:3/4;background:var(--g);display:grid;place-items:center}
+.person .pic{border-radius:28px;overflow:hidden;aspect-ratio:3/4;background:var(--g);display:grid;place-items:center}
 .person .pic img{width:100%;height:100%;object-fit:cover}
 .person .pic .mk{width:46%;color:rgba(255,255,255,.88)}
 .person h3{font-size:1.5rem;margin:18px 0 6px}
@@ -115,6 +115,13 @@ h2.big{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:38px}
 .big-phone a.tel{display:block;font-family:var(--serif);font-size:clamp(2.6rem,9vw,6.6rem);text-decoration:none;line-height:1.05;margin-bottom:26px}
 .big-phone .row{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:center;font-weight:500}
 .big-phone a{text-decoration:none}
+.hrs{margin-top:54px}
+.hrs p.k{margin-bottom:16px}
+.hrs ul{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;max-width:940px;margin:0 auto}
+.hrs li{border:1px solid rgba(6,55,26,.35);border-radius:20px;padding:18px 10px}
+.hrs b{display:block;font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-bottom:6px}
+.hrs span{font-family:var(--serif);font-size:1.5rem}
+.steps3 a{color:var(--lime);font-weight:600}
 .where{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .where .map{border-radius:30px;overflow:hidden;min-height:380px}
 .where iframe{width:100%;height:100%;min-height:380px;border:0}
@@ -134,6 +141,7 @@ footer{padding:28px 0;text-align:center;font-size:.85rem;color:#a9bba8}
  .two,.trio,.tgrid,.where{grid-template-columns:1fr}.tgrid{max-width:380px;margin-inline:auto}
  .where .door{grid-template-columns:1fr}.where .door img{max-height:none;aspect-ratio:4/5;object-position:center 60%}
  section.s{padding:68px 0}
+ .hrs ul{grid-template-columns:1fr;gap:8px}.hrs li{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-radius:16px}.hrs b{margin:0}
 }
 
 </style>
@@ -145,7 +153,7 @@ function end(){var l=document.querySelector('.loader');if(l)l.classList.add('out
 window.__ndEnd=end;setTimeout(end,2100);
 })();
 </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "name": "Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia", "image": "https://nowadroga-katarzyna-tokaj-czaja.pl/src/zdjecia/gabinet-1.webp", "url": "https://nowadroga-katarzyna-tokaj-czaja.pl/", "telephone": "+48 727 449 774", "email": "poradnianowadroga@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "ul. Szpitalna 11/106-107", "addressLocality": "Barlinek", "postalCode": "74-320", "addressCountry": "PL"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "name": "Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia", "image": "https://nowadroga-katarzyna-tokaj-czaja.pl/src/zdjecia/gabinet-1.webp", "url": "https://nowadroga-katarzyna-tokaj-czaja.pl/", "telephone": "+48 727 449 774", "email": "poradnianowadroga@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "ul. Szpitalna 11/106-107", "addressLocality": "Barlinek", "postalCode": "74-320", "addressCountry": "PL"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "08:00", "closes": "13:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "08:00", "closes": "16:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "08:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "17:00"}]}</script>
 </head>
 <body>
 <div class="loader" aria-hidden="true"><div class="mk mk-logo"></div></div>
@@ -154,7 +162,7 @@ window.__ndEnd=end;setTimeout(end,2100);
 <a class="brand" href="#"><span class="mk mk-znak"></span><b>Nowa Droga</b></a>
 <button class="burger" data-burger aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 <nav class="links" aria-label="Menu główne">
-<a href="#dla-kogo">Dla kogo</a><a href="#zespol">Zespół</a><a href="#pytania">Pytania</a><a href="#kontakt">Kontakt</a>
+<a href="#dla-kogo">Dla kogo</a><a href="#zespol">Zespół</a><a href="#terapia">Jak zacząć</a><a href="#pytania">Pytania</a><a href="#kontakt">Kontakt</a>
 <a class="btn" href="tel:+48727449774"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>Zadzwoń</a>
 </nav>
 </div>
@@ -163,7 +171,7 @@ window.__ndEnd=end;setTimeout(end,2100);
 <main>
 <section class="hero"><div class="wrap">
 <div>
-<h1>Nowa <em>droga</em> zaczyna się od rozmowy.</h1>
+<h1>Nowa Droga zaczyna się od rozmowy.</h1>
 <p>Poradnia terapii uzależnień i współuzależnienia w Barlinku.</p>
 <div class="cta"><a class="btn" href="tel:+48727449774"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>+48 727 449 774</a><a class="btn o" href="#pytania">Pytania</a></div>
 </div>
@@ -183,12 +191,21 @@ window.__ndEnd=end;setTimeout(end,2100);
 <article class="person rv"><div class="pic ph"><div class="mk mk-znak"></div></div><h3>Dr nauk med. Anna Kaczmarek</h3><p>Specjalista Psychiatrii</p></article></div>
 </div></section>
 
+<section class="s steps3" id="terapia" style="padding-top:0"><div class="wrap">
+<h2 class="big rv" style="color:var(--cream)">Jak rozpocząć terapię</h2>
+<div class="trio" style="margin-top:0">
+<div class="rv"><h3>1. Przyjdź do poradni</h3><p>Najlepiej osobiście. To najprostszy sposób, a skierowanie nie jest potrzebne.</p></div>
+<div class="rv"><h3>2. Albo zadzwoń czy napisz</h3><p>Jeśli się nie da, zadzwoń pod <a href="tel:+48727449774">+48 727 449 774</a> albo napisz na <a href="mailto:poradnianowadroga@gmail.com">poradnianowadroga@gmail.com</a>.</p></div>
+<div class="rv"><h3>3. Termin pierwszej wizyty</h3><p>Termin pierwszej wizyty uzależniony jest od liczby osób oczekujących na przyjęcie do poradni. Informację o przewidywanym czasie oczekiwania można uzyskać podczas rejestracji.</p></div>
+</div>
+</div></section>
+
 <section class="s" id="pytania" style="padding-top:0"><div class="wrap">
 <h2 class="big rv" style="color:var(--cream)">Pytania</h2>
 <div class="faq">
 <details class="rv"><summary><span>Czy potrzebuję skierowania?</span><span class="ic pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Nie, skierowanie nie jest potrzebne.</p></details>
 <details class="rv"><summary><span>Ile kosztuje wizyta?</span><span class="ic pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Wizyty są refundowane przez NFZ.</p></details>
-<details class="rv"><summary><span>Jak się zapisać?</span><span class="ic pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Najlepiej osobiście w poradni, a jeśli się nie da, zadzwoń albo napisz maila. Czas oczekiwania zależy od kolejki NFZ.</p></details>
+<details class="rv"><summary><span>Jak rozpocząć terapię?</span><span class="ic pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Najlepiej przyjść osobiście do poradni, a jeśli się nie da, zadzwonić albo napisać maila. Termin pierwszej wizyty zależy od liczby osób oczekujących, a informację o czasie oczekiwania uzyskasz podczas rejestracji.</p></details>
 <details class="rv"><summary><span>Czy mogę przyjść, jeśli to nie ja jestem uzależniony?</span><span class="ic pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Tak, oczywiście. Pomagamy także bliskim osób uzależnionych.</p></details>
 <details class="rv"><summary><span>Czy to, co powiem, zostaje między nami?</span><span class="ic pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Tak. To, co jest mówione w gabinecie, zostaje w gabinecie.</p></details>
 <details class="rv"><summary><span>Jak długo trwa terapia?</span><span class="ic pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Tego nie da się z góry określić. Zależy od pacjenta, jego zaangażowania i problemów, z którymi przychodzi.</p></details>
@@ -199,6 +216,7 @@ window.__ndEnd=end;setTimeout(end,2100);
 <p class="k rv">Zadzwoń albo napisz</p>
 <a class="tel rv" href="tel:+48727449774">+48 727 449 774</a>
 <div class="row rv"><a href="mailto:poradnianowadroga@gmail.com">poradnianowadroga@gmail.com</a><span>ul. Szpitalna 11/106-107, 74-320 Barlinek</span></div>
+<div class="hrs rv"><p class="k">Godziny przyjęć</p><ul><li><b>Poniedziałek</b><span>8:00–13:00</span></li><li><b>Wtorek</b><span>9:00–19:00</span></li><li><b>Środa</b><span>8:00–16:00</span></li><li><b>Czwartek</b><span>8:00–18:00</span></li><li><b>Piątek</b><span>8:00–17:00</span></li></ul></div>
 </div></section>
 
 <section class="s"><div class="wrap where">
