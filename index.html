@@ -18,10 +18,45 @@
 <meta property="og:title" content="Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia">
 <meta property="og:description" content="Wizyty refundowane przez NFZ, bez skierowania. Barlinek, ul. Szpitalna 11/106-107.">
 <meta property="og:image" content="https://nowadroga-katarzyna-tokaj-czaja.pl/src/zdjecia/gabinet-1.webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/src/fonts/fraunces-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/src/fonts/inter-latin.woff2" crossorigin>
 <style>
+/* Fraunces latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(/src/fonts/fraunces-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Fraunces latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(/src/fonts/fraunces-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(/src/fonts/inter-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Inter latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(/src/fonts/inter-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 :root{--loader-bg:#06371a;--loader-fg:#f4efe2}
 
 *,*::before,*::after{box-sizing:border-box}
@@ -125,6 +160,12 @@ h2.big{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:38px}
 .where{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .where .map{border-radius:30px;overflow:hidden;min-height:380px}
 .where iframe{width:100%;height:100%;min-height:380px;border:0}
+.mapf{display:grid;place-content:center;justify-items:center;gap:14px;text-align:center;min-height:380px;height:100%;background:var(--deep2);color:var(--cream);padding:30px}
+.mapf .ic{width:44px;height:44px;color:var(--lime)}
+.mapf strong{font-family:var(--serif);font-weight:500;font-size:1.35rem;line-height:1.3}
+.mapf p{opacity:.8;font-size:.95rem}
+.mapf .mapb{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:6px}
+footer a{color:inherit;text-underline-offset:3px}
 .where .door{border-radius:30px;overflow:hidden;background:var(--g);color:var(--cream);display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}
 .where .door img{width:100%;height:100%;object-fit:cover}
 .where .door div{padding:30px;align-self:center}
@@ -217,11 +258,11 @@ window.__ndEnd=end;setTimeout(end,2100);
 </div></section>
 
 <section class="s"><div class="wrap where">
-<div class="map rv"><iframe title="Mapa dojazdu: Szpitalna 11, Barlinek" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.209769790248!2d15.21021431580601!3d53.00316997991373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8f9b7a2a40ba3%3A0x9ef33da4596c8fc3!2sSzpitalna%2011%2C%2074-320%20Barlinek!5e0!3m2!1spl!2spl!4v1650000000000!5m2!1spl!2spl" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+<div class="map rv"><div class="mapf" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.209769790248!2d15.21021431580601!3d53.00316997991373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8f9b7a2a40ba3%3A0x9ef33da4596c8fc3!2sSzpitalna%2011%2C%2074-320%20Barlinek!5e0!3m2!1spl!2spl!4v1650000000000!5m2!1spl!2spl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><strong>ul. Szpitalna 11/106-107<br>74-320 Barlinek</strong><p>Mapa Google wczyta się dopiero po kliknięciu.</p><div class="mapb"><button type="button" class="btn" data-showmap>Pokaż mapę</button><a class="btn o" href="https://www.google.com/maps/search/?api=1&amp;query=Szpitalna+11%2C+74-320+Barlinek" target="_blank" rel="noopener">Otwórz w Mapach Google</a></div></div></div>
 <div class="door rv"><img src="src/zdjecia/drzwi-106.webp" width="900" height="1200" alt="Drzwi poradni z numerem 106" loading="lazy" decoding="async"><div><h3>Jak trafić</h3><p>I piętro, Centrum Medyczne. Szukaj drzwi 106 i 107.</p></div></div>
 </div></section>
 </main>
-<footer><div class="wrap">&copy; 2026 Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia, Barlinek</div></footer>
+<footer><div class="wrap">&copy; 2026 Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia, Barlinek · <a href="polityka-prywatnosci/">Polityka prywatności</a></div></footer>
 <script>
 (function(){
 var l=document.querySelector('.loader');if(l)l.addEventListener('click',function(){window.__ndEnd&&window.__ndEnd()});
@@ -231,6 +272,10 @@ hd.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function
 var els=document.querySelectorAll('.rv');
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
 })();
+</script>
+<script>
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-showmap]');if(!b)return;
+var f=b.closest('[data-map]'),i=document.createElement('iframe');i.title='Mapa dojazdu: Szpitalna 11, Barlinek';i.src=f.getAttribute('data-map');i.referrerPolicy='no-referrer-when-downgrade';i.allowFullscreen=true;f.replaceWith(i)});
 </script>
 </body>
 </html>

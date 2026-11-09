@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności | Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia</title>
+<meta name="description" content="Polityka prywatności strony Nowa Droga: kto jest administratorem danych, jakie dane zbieramy i jakie masz prawa.">
+<meta name="theme-color" content="#06371a">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
+<link rel="icon" href="src/favicon/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="src/favicon/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="src/favicon/apple-touch-icon.png">
+<link rel="manifest" href="src/favicon/site.webmanifest">
+<link rel="canonical" href="https://nowadroga-katarzyna-tokaj-czaja.pl/polityka-prywatnosci/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nowadroga-katarzyna-tokaj-czaja.pl/polityka-prywatnosci/">
+<meta property="og:title" content="Polityka prywatności – Nowa Droga">
+<meta property="og:description" content="Wizyty refundowane przez NFZ, bez skierowania. Barlinek, ul. Szpitalna 11/106-107.">
+<meta property="og:image" content="https://nowadroga-katarzyna-tokaj-czaja.pl/src/zdjecia/gabinet-1.webp">
+<link rel="preload" as="font" type="font/woff2" href="/src/fonts/fraunces-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/src/fonts/inter-latin.woff2" crossorigin>
+<style>
+/* Fraunces latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(/src/fonts/fraunces-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Fraunces latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(/src/fonts/fraunces-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(/src/fonts/inter-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Inter latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(/src/fonts/inter-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+:root{--loader-bg:#06371a;--loader-fg:#f4efe2}
+
+*,*::before,*::after{box-sizing:border-box}
+:root{color-scheme:only light}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.mk{display:block;background:currentColor;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
+.mk-logo{--m:url(src/logo/logo.svg);aspect-ratio:309/282}
+.mk-znak{--m:url(src/logo/znak.svg);aspect-ratio:309/193}
+/* loader */
+.loader{position:fixed;inset:0;z-index:200;display:none;place-items:center;background:var(--loader-bg);color:var(--loader-fg);cursor:pointer;transition:opacity .6s ease}
+html.loading .loader{display:grid}
+.loader.out{opacity:0;pointer-events:none}
+.loader .mk{width:min(74vw,400px);animation:lg 1.3s cubic-bezier(.2,.7,.2,1) both}
+@keyframes lg{from{opacity:0;transform:translateY(14px) scale(.94)}to{opacity:1;transform:none}}
+html.loading body{overflow:hidden}
+/* reveal */
+html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+html.js .rv.in{opacity:1;transform:none}
+/* faq */
+details>summary{list-style:none;cursor:pointer}
+details>summary::-webkit-details-marker{display:none}
+.ic{width:22px;height:22px;flex:none}
+.ic svg{width:100%;height:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}html.js .rv{opacity:1;transform:none;transition:none}.loader .mk{animation:none}}
+
+
+:root{--bg:#06371a;--ink:#eef2e8;--g:#004517;--deep:#06371a;--deep2:#0a4a23;--cream:#f4efe2;--lime:#cfe3b4;--accent:#cfe3b4;--serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+body{background:var(--deep)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin:0;letter-spacing:-.01em}
+header{position:sticky;top:0;z-index:50;background:rgba(6,55,26,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
+.brand .mk{width:44px}
+.brand b{font-family:var(--serif);font-weight:500;font-size:1.35rem}
+.links{display:flex;align-items:center;gap:26px;font-size:.92rem}
+.links a{text-decoration:none;color:#dfe8d6}
+.links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:.85rem 1.4rem;border-radius:999px;background:var(--lime);color:var(--deep)!important;text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn .ic{width:18px;height:18px}
+.btn.o{background:transparent;color:var(--cream)!important;border:1px solid rgba(255,255,255,.4)}
+.burger{display:none;background:none;border:0;padding:8px;color:var(--cream)}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px 0}
+.nfz{background:var(--lime);color:var(--deep);text-align:center;font-weight:600;font-size:.88rem;padding:.55rem 1rem}
+.hero{padding:70px 0 90px;color:var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(3.2rem,7.4vw,6.6rem);margin-bottom:24px}
+.hero h1{color:#fff}
+.hero p{font-size:1.18rem;opacity:.88;max-width:none;text-wrap:balance;margin-bottom:34px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.arch{border-radius:28px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 0 0 12px rgba(255,255,255,.06)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.light{background:var(--cream);color:#16241b}
+.light h2,.light h3{color:var(--g)}
+section.s{padding:100px 0}
+h2.big{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:38px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.box{border-radius:30px;padding:38px;background:var(--g);color:var(--cream)}
+.box.l{background:#fff;color:#16241b;border:1px solid #e4dfcf}
+.box h3{font-size:1.9rem;margin-bottom:20px;color:inherit}
+.box ul{display:flex;flex-wrap:wrap;gap:10px}
+.box li{padding:.45rem 1rem;border-radius:999px;background:rgba(255,255,255,.12);font-size:.95rem}
+.box.l li{background:#efe9d8}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
+.trio div{border-radius:30px;padding:30px;background:var(--deep2);color:var(--cream)}
+.trio h3{font-size:1.55rem;margin-bottom:8px;color:var(--lime)}
+.trio p{opacity:.85}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.person .pic{border-radius:28px;overflow:hidden;aspect-ratio:3/4;background:var(--g);display:grid;place-items:center}
+.person .pic img{width:100%;height:100%;object-fit:cover}
+.person .pic .mk{width:46%;color:rgba(255,255,255,.88)}
+.person h3{font-size:1.5rem;margin:18px 0 6px}
+.person p{opacity:.8;font-size:.95rem;max-width:30ch}
+.pic.ph{background:var(--g)}
+.faq{max-width:860px}
+.faq details{background:var(--deep2);border-radius:22px;margin-bottom:12px;color:var(--cream)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 28px;font-family:var(--serif);font-size:1.35rem}
+.faq .pl{transition:transform .3s;color:var(--lime)}
+.faq details[open] .pl{transform:rotate(45deg)}
+.faq details p{padding:0 28px 26px;opacity:.85;max-width:60ch}
+.big-phone{background:var(--lime);color:var(--deep);padding:100px 0;text-align:center}
+.big-phone p.k{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:12px}
+.big-phone a.tel{display:block;font-family:var(--sans);font-weight:700;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.015em;font-size:clamp(2.1rem,8.2vw,5.6rem);text-decoration:none;line-height:1.1;margin-bottom:28px}
+.big-phone .row{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:center;font-weight:500;font-size:1.1rem}
+.big-phone a{text-decoration:none}
+.hrs{margin-top:54px}
+.hrs p.k{margin-bottom:16px}
+.hrs ul{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;max-width:940px;margin:0 auto}
+.hrs li{border:1px solid rgba(6,55,26,.35);border-radius:20px;padding:18px 10px}
+.hrs b{display:block;font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-bottom:6px}
+.hrs span{font-family:var(--sans);font-weight:600;font-variant-numeric:lining-nums tabular-nums;font-size:1.3rem}
+.steps3 a{color:var(--lime);font-weight:600}
+.where{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.where .map{border-radius:30px;overflow:hidden;min-height:380px}
+.where iframe{width:100%;height:100%;min-height:380px;border:0}
+.mapf{display:grid;place-content:center;justify-items:center;gap:14px;text-align:center;min-height:380px;height:100%;background:var(--deep2);color:var(--cream);padding:30px}
+.mapf .ic{width:44px;height:44px;color:var(--lime)}
+.mapf strong{font-family:var(--serif);font-weight:500;font-size:1.35rem;line-height:1.3}
+.mapf p{opacity:.8;font-size:.95rem}
+.mapf .mapb{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:6px}
+footer a{color:inherit;text-underline-offset:3px}
+.where .door{border-radius:30px;overflow:hidden;background:var(--g);color:var(--cream);display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}
+.where .door img{width:100%;height:100%;object-fit:cover}
+.where .door div{padding:30px;align-self:center}
+.where .door h3{font-size:1.7rem;color:var(--lime);margin-bottom:10px}
+footer{padding:28px 0;text-align:center;font-size:.85rem;color:#a9bba8}
+@media (max-width:900px){
+ .links{position:absolute;left:0;right:0;top:100%;background:var(--deep);flex-direction:column;align-items:flex-start;padding:10px 20px 24px;gap:0;display:none;border-bottom:1px solid rgba(255,255,255,.1)}
+ .links a{padding:14px 0;width:100%}
+ .links .btn{width:auto;margin-top:8px;padding:.85rem 1.4rem}
+ header.open .links{display:flex}
+ .burger{display:block}
+ .hero{padding:36px 0 60px}.hero .wrap{grid-template-columns:1fr;gap:40px}
+ .arch{max-width:380px;order:-1;margin-inline:auto}
+ .two,.trio,.tgrid,.where{grid-template-columns:1fr}.tgrid{max-width:380px;margin-inline:auto}
+ .where .door{grid-template-columns:1fr}.where .door img{max-height:none;aspect-ratio:4/5;object-position:center 60%}
+ section.s{padding:68px 0}
+ .hrs ul{grid-template-columns:1fr;gap:8px}.hrs li{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-radius:16px}.hrs b{margin:0}
+}
+
+.policy{padding:130px 0 90px}
+.policy .wrap{max-width:780px}
+.policy h1{font-size:clamp(2.4rem,5vw,3.8rem);color:var(--g);margin-bottom:22px}
+.policy h2{font-size:1.5rem;color:var(--g);margin:40px 0 12px}
+.policy p,.policy li{margin-bottom:12px;max-width:68ch}
+.policy ul{list-style:disc;padding-left:1.3rem;margin-bottom:12px}
+.policy a{color:var(--g);text-underline-offset:3px}
+.policy .upd{opacity:.7;font-size:.92rem;margin-top:36px}
+header{position:sticky}
+
+</style>
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "name": "Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia", "image": "https://nowadroga-katarzyna-tokaj-czaja.pl/src/zdjecia/gabinet-1.webp", "url": "https://nowadroga-katarzyna-tokaj-czaja.pl/", "telephone": "+48 727 449 774", "email": "poradnianowadroga@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "ul. Szpitalna 11/106-107", "addressLocality": "Barlinek", "postalCode": "74-320", "addressCountry": "PL"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "08:00", "closes": "13:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "08:00", "closes": "16:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "08:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "17:00"}]}</script>
+</head>
+<body>
+<header data-nav>
+<div class="wrap nav">
+<a class="brand" href="/"><span class="mk mk-znak"></span><b>Nowa Droga</b></a>
+<button class="burger" data-burger aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="links" aria-label="Menu główne">
+<a href="/">Strona główna</a><a href="/#kontakt">Kontakt</a>
+<a class="btn" href="tel:+48727449774"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>Zadzwoń</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="s light policy"><div class="wrap">
+<h1>Polityka prywatności</h1>
+<p>Ta strona nie zbiera danych o Tobie poza tym, co opisano poniżej. Nie używamy plików cookies, analityki ani reklam.</p>
+
+<h2>Kto jest administratorem danych</h2>
+<p>Administratorem danych jest <strong>Nowa Droga Katarzyna Tokaj-Czaja</strong>, ul. Szpitalna 11/106-107, 74-320 Barlinek, e-mail: <a href="mailto:poradnianowadroga@gmail.com">poradnianowadroga@gmail.com</a>, tel. <a href="tel:+48727449774">+48 727 449 774</a>.</p>
+
+<h2>Jakie dane i po co</h2>
+<ul>
+<li><strong>Dane techniczne (logi serwera).</strong> Gdy wchodzisz na stronę, serwer hostingowy zapisuje m.in. adres IP, datę i godzinę oraz adres odwiedzonej podstrony. Służy to bezpieczeństwu i prawidłowemu działaniu strony (prawnie uzasadniony interes, art. 6 ust. 1 lit. f RODO).</li>
+<li><strong>Telefon lub e-mail.</strong> Jeśli do nas zadzwonisz lub napiszesz, użyjemy Twoich danych (np. numeru telefonu, adresu e-mail, treści wiadomości) tylko po to, żeby Ci odpowiedzieć i umówić wizytę (prawnie uzasadniony interes, art. 6 ust. 1 lit. f RODO). Podanie danych jest dobrowolne.</li>
+</ul>
+<p>Ta strona nie zbiera danych o zdrowiu. To, co mówisz w gabinecie, objęte jest tajemnicą zawodową i odrębnymi zasadami obowiązującymi w poradni.</p>
+
+<h2>Pliki cookies i usługi zewnętrzne</h2>
+<ul>
+<li>Nie używamy plików cookies, narzędzi analitycznych ani reklam.</li>
+<li>Czcionki znajdują się na naszym serwerze, więc Twoja przeglądarka nie łączy się z Google Fonts.</li>
+<li><strong>Mapa Google</strong> wczytuje się dopiero po kliknięciu „Pokaż mapę”. Dopiero wtedy Twoja przeglądarka łączy się z Google, które może zapisać własne dane i pliki cookies (zob. polityka prywatności Google). Jeśli nie klikniesz, do Google nic nie jest wysyłane. Link „Otwórz w Mapach Google” przenosi na stronę Google.</li>
+<li>Stronę udostępnia hosting Vercel Inc. (USA), dlatego dane z logów mogą być przetwarzane poza Europejskim Obszarem Gospodarczym, z zachowaniem wymogów RODO.</li>
+</ul>
+
+<h2>Jak długo przechowujemy dane</h2>
+<p>Logi serwera są przechowywane przez czas określony przez dostawcę hostingu, zwykle krótko. Dane z kontaktu telefonicznego lub mailowego przechowujemy tak długo, jak trzeba, żeby załatwić sprawę, a potem tyle, ile wymagają przepisy.</p>
+
+<h2>Twoje prawa</h2>
+<p>Masz prawo dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, sprzeciwu wobec przetwarzania oraz przenoszenia danych. Możesz też złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (uodo.gov.pl). Wszystkie sprawy dotyczące danych możesz zgłosić mailowo na adres <a href="mailto:poradnianowadroga@gmail.com">poradnianowadroga@gmail.com</a>.</p>
+
+<p class="upd">Ostatnia aktualizacja: listopad 2026.</p>
+</div></section>
+</main>
+<footer><div class="wrap">&copy; 2026 Nowa Droga – Poradnia Terapii Uzależnień i Współuzależnienia, Barlinek · <a href="/">Strona główna</a></div></footer>
+<script>
+(function(){
+var l=document.querySelector('.loader');if(l)l.addEventListener('click',function(){window.__ndEnd&&window.__ndEnd()});
+var hd=document.querySelector('[data-nav]'),bt=document.querySelector('[data-burger]');
+if(bt&&hd){bt.addEventListener('click',function(){var o=hd.classList.toggle('open');bt.setAttribute('aria-expanded',o)});
+hd.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hd.classList.remove('open');bt.setAttribute('aria-expanded',false)})})}
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
