@@ -159,6 +159,11 @@ h2.big{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:38px}
 .hrs b{display:block;font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-bottom:6px}
 .hrs span{font-family:var(--sans);font-weight:600;font-variant-numeric:lining-nums tabular-nums;font-size:1.3rem}
 .steps3 a{color:var(--lime);font-weight:600}
+.steps3 .cont{display:grid;gap:14px;margin:16px 0 18px}
+.steps3 .cont span{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);opacity:.85;margin-bottom:2px}
+.steps3 .cont a{color:var(--cream);text-decoration:none;font-size:1rem;overflow-wrap:anywhere;border-bottom:1px solid rgba(207,227,180,.5)}
+.steps3 .cont a.ph{font-size:1.5rem;font-weight:700;letter-spacing:-.01em;white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
+.steps3 .trio p.note{font-size:.92rem;opacity:.78;padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
 .hstrip{margin-top:22px;border-radius:30px;padding:26px 30px;background:var(--deep2);color:var(--cream)}
 .hstrip p.k{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--lime);margin-bottom:14px}
 .hstrip ul{display:flex;flex-wrap:wrap;gap:10px}
@@ -244,7 +249,9 @@ window.__ndEnd=end;setTimeout(end,2100);
 <h2 class="big rv" style="color:var(--cream)">Jak rozpocząć terapię?</h2>
 <div class="trio" style="margin-top:0">
 <div class="rv"><h3>1. Zgłoś się do poradni</h3><p>Możesz przyjść osobiście i umówić pierwszą wizytę. Nie potrzebujesz skierowania.</p></div>
-<div class="rv"><h3>2. Zadzwoń lub napisz</h3><p>Możesz również skontaktować się z nami telefonicznie pod numerem <a href="tel:+48727449774">727 449 774</a> lub mailowo: <a href="mailto:poradnianowadroga@gmail.com">poradnianowadroga@gmail.com</a>. Terapeuci odbierają telefon i oddzwaniają, kiedy tylko będzie przestrzeń.</p></div>
+<div class="rv"><h3>2. Zadzwoń lub napisz</h3><p>Możesz również skontaktować się z nami:</p>
+<ul class="cont"><li><span>Telefonicznie</span><a class="ph" href="tel:+48727449774">727 449 774</a></li><li><span>Mailowo</span><a href="mailto:poradnianowadroga@gmail.com">poradnianowadroga@gmail.com</a></li></ul>
+<p class="note">Terapeuci odbierają telefon i oddzwaniają, kiedy tylko będzie przestrzeń.</p></div>
 <div class="rv"><h3>3. Termin pierwszej wizyty</h3><p>Termin ustalamy podczas rejestracji, z uwzględnieniem liczby osób oczekujących na przyjęcie.</p></div>
 </div>
 <div class="hstrip rv"><p class="k">Godziny przyjęć</p><ul><li><b>Poniedziałek</b><span>8:00–13:00</span></li><li><b>Wtorek</b><span>9:00–19:00</span></li><li><b>Środa</b><span>8:00–16:00</span></li><li><b>Czwartek</b><span>8:00–18:00</span></li><li><b>Piątek</b><span>8:00–17:00</span></li></ul></div>
